@@ -1,0 +1,488 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API of the Recreational Facilities Operating License",
+        "version": "1.0.0",
+        "title": "RFOL Recreational Facilities Operating License",
+        "contact": {
+            "email": "a.mamdouh.c@rcu.gov.sa"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "tags": [
+        {
+            "name": "admins",
+            "description": "Secured Admin-only calls"
+        },
+        {
+            "name": "developers",
+            "description": "Operations available to regular developers"
+        }
+    ],
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/rfollicenserequest": {
+            "post": {
+                "tags": [
+                    "admins"
+                ],
+                "summary": "create/update RFOL request",
+                "description": "Create or Update Recreational Facilities Operating License",
+                "operationId": "rfollicenserequest",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Appian-API-Key",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Recreational Facilities Operating License",
+                        "description": "Recreational Facilities Operating License",
+                        "required": false,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "RequestId": {
+                                    "type": "integer",
+                                    "minimum": 1
+                                },
+                                "InvestorAccount": {
+                                    "type": "string"
+                                },
+                                "BrandNameEnglish": {
+                                    "type": "string"
+                                },
+                                "BrandNameArabic": {
+                                    "type": "string"
+                                },
+                                "Category": {
+                                    "type": "string"
+                                },
+                                "Subcategory": {
+                                    "type": "string"
+                                },
+                                "DisplayLicenseOnUserManual": {
+                                    "type": "string"
+                                },
+                                "Region": {
+                                    "type": "string"
+                                },
+                                "City": {
+                                    "type": "string"
+                                },
+                                "BuildingNumber": {
+                                    "type": "string"
+                                },
+                                "StreetName": {
+                                    "type": "string"
+                                },
+                                "District": {
+                                    "type": "string"
+                                },
+                                "PostalCode": {
+                                    "type": "string"
+                                },
+                                "Website": {
+                                    "type": "string"
+                                },
+                                "Facebook": {
+                                    "type": "string"
+                                },
+                                "Twitter": {
+                                    "type": "string"
+                                },
+                                "Instagram": {
+                                    "type": "string"
+                                },
+                                "YouTube": {
+                                    "type": "string"
+                                },
+                                "LinkedIn": {
+                                    "type": "string"
+                                },
+                                "PhoneNumber": {
+                                    "type": "string"
+                                },
+                                "Email": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "RFOL Request added/updated",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "RequestId": {
+                                    "type": "integer",
+                                    "minimum": 1,
+                                    "example": 1
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "internal error in Appian System",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Response": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rfoluplaoddocuments": {
+            "post": {
+                "tags": [
+                    "admins"
+                ],
+                "summary": "uplaod 4 documents related to the request submission or update(National Address Subscription Certificate, Logo ,Trademark registration certificate, other)",
+                "description": "uplaod 4 documents related to the request submission or update(National Address Subscription Certificate, Logo ,Trademark registration certificate, other)",
+                "operationId": "rfoluplaoddocuments",
+                "consumes": [
+                    "based on uploaded file type (application/pdf, image/png ....)"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Appian-API-Key",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Appian-Document-Name",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "RequestId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    {
+                        "name": "DocumentType",
+                        "in": "query",
+                        "required": true,
+                        "type": "string",
+                        "enum": [
+                            "NationalAddressSubscriptionCertificate",
+                            "Logo",
+                            "TrademarkRegistrationCertificate",
+                            "Other",
+                            "OperationalPlan"
+                        ]
+                    },
+                    {
+                        "in": "body",
+                        "name": "document",
+                        "description": "document to be uploaded in binary representation",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "format": "binary",
+                            "example": "document"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "document uploaded to Appian Successfully",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "DocumentId": {
+                                    "type": "integer",
+                                    "example": 1923
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "400 Bad Request",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Response": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "internal error in Appian System",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Response": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rfolgetrequestbyid": {
+            "get": {
+                "tags": [
+                    "admins"
+                ],
+                "summary": "get all RFOL request details by id(including license id if uplaoded & request status)",
+                "description": "get all RFOL request details by id(including license id if uplaoded & request status)",
+                "operationId": "rfolgetrequestbyid",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Appian-API-Key",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "RequestId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "minimum": 1
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "request details returned successfully",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "RequestId": {
+                                    "type": "integer",
+                                    "minimum": 1
+                                },
+                                "InvestorAccount": {
+                                    "type": "string"
+                                },
+                                "BrandNameEnglish": {
+                                    "type": "string"
+                                },
+                                "BrandNameArabic": {
+                                    "type": "string"
+                                },
+                                "Category": {
+                                    "type": "string"
+                                },
+                                "Subcategory": {
+                                    "type": "string"
+                                },
+                                "displayLicenseOnUserManual": {
+                                    "type": "string"
+                                },
+                                "Region": {
+                                    "type": "string"
+                                },
+                                "City": {
+                                    "type": "string"
+                                },
+                                "BuildingNumber": {
+                                    "type": "string"
+                                },
+                                "StreetName": {
+                                    "type": "string"
+                                },
+                                "District": {
+                                    "type": "string"
+                                },
+                                "PostalCode": {
+                                    "type": "string"
+                                },
+                                "Website": {
+                                    "type": "string"
+                                },
+                                "Facebook": {
+                                    "type": "string"
+                                },
+                                "Twitter": {
+                                    "type": "string"
+                                },
+                                "Instagram": {
+                                    "type": "string"
+                                },
+                                "YouTube": {
+                                    "type": "string"
+                                },
+                                "LinkedIn": {
+                                    "type": "string"
+                                },
+                                "PhoneNumber": {
+                                    "type": "string"
+                                },
+                                "Email": {
+                                    "type": "string"
+                                },
+                                "RequestStatus": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Pending With Operation Team",
+                                        "Under Assigned Group Review",
+                                        "Under Operation Team Review",
+                                        "Under Operations Head Review",
+                                        "Complete - Approved",
+                                        "Complete - Rejected"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "400 Bad Request",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Response": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "404 Not Found",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Response": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "internal error in Appian System",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Response": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rfoldownloaddocumentbyrequestid": {
+            "get": {
+                "tags": [
+                    "admins"
+                ],
+                "summary": "get any uploaded document by it's Appian doc id",
+                "description": "get any uploaded document by it's Appian doc id",
+                "operationId": "rfoldownloaddocumentbyrequestid",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Appian-API-Key",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "RequestId",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    {
+                        "name": "DocumentType",
+                        "in": "query",
+                        "required": true,
+                        "type": "string",
+                        "enum": [
+                            "NationalAddressSubscriptionCertificate",
+                            "Logo",
+                            "TrademarkRegistrationCertificate",
+                            "Other",
+                            "OperationalPlan",
+                            "License"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "return the document",
+                        "headers": {
+                            "File-Name": {
+                                "type": "string",
+                                "description": "name.extension"
+                            }
+                        },
+                        "schema": {
+                            "type": "string",
+                            "format": "binary"
+                        }
+                    },
+                    "400": {
+                        "description": "400 Bad Request",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Response": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "404 Not Found",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Response": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "internal error in Appian System",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "Response": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,817 @@
+{
+    "info": {
+        "_postman_id": "9eb725cb-7868-43e7-819c-4648be321d3f",
+        "name": "RFOL Recreational Facilities Operating License Test Suite ",
+        "description": "API of the Recreational Facilities Operating License\n\nContact Support:\n Email: a.mamdouh.c@rcu.gov.sa",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "create/update RFOL request",
+            "id": "e5939f89-8782-4b2b-b71b-aebfbdb77326",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "description": "(Required) ",
+                        "key": "Appian-API-Key",
+                        "value": "esse ullamco cillum"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"RequestId\": null,\n    \"InvestorAccount\": \"sunt consequat\",\n    \"BrandNameEnglish\": \"in sint consectetur\",\n    \"BrandNameArabic\": \"ipsum ea sed\",\n    \"Category\": \"aliqua et magna\",\n    \"Subcategory\": \"in aliqua in ut\",\n    \"DisplayLicenseOnUserManual\": \"sit nostrud commodo irure\",\n    \"Region\": \"dolore veniam esse sint dolor\",\n    \"City\": \"aute id ut dolore Duis\",\n    \"BuildingNumber\": \"est ut in volupt\",\n    \"StreetName\": \"deserunt pariatur\",\n    \"District\": \"et voluptate laborum ut\",\n    \"PostalCode\": \"amet tempor sint\",\n    \"Website\": \"cillum fugiat\",\n    \"Facebook\": \"consequat sed\",\n    \"Twitter\": \"sunt adipi\",\n    \"Instagram\": \"eu quis consectetur\",\n    \"YouTube\": \"velit\",\n    \"LinkedIn\": \"labore qui Duis\",\n    \"PhoneNumber\": \"aliquip commodo culpa\",\n    \"Email\": \"cillum deserunt non\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/rfollicenserequest",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "rfollicenserequest"
+                    ]
+                },
+                "description": "Create or Update Recreational Facilities Operating License"
+            },
+            "response": [
+                {
+                    "id": "c110e4dc-771c-4235-beae-f6b9fef41073",
+                    "name": "RFOL Request added/updated",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"RequestId\": \"<integer>\",\n    \"InvestorAccount\": \"<string>\",\n    \"BrandNameEnglish\": \"<string>\",\n    \"BrandNameArabic\": \"<string>\",\n    \"Category\": \"<string>\",\n    \"Subcategory\": \"<string>\",\n    \"DisplayLicenseOnUserManual\": \"<string>\",\n    \"Region\": \"<string>\",\n    \"City\": \"<string>\",\n    \"BuildingNumber\": \"<string>\",\n    \"StreetName\": \"<string>\",\n    \"District\": \"<string>\",\n    \"PostalCode\": \"<string>\",\n    \"Website\": \"<string>\",\n    \"Facebook\": \"<string>\",\n    \"Twitter\": \"<string>\",\n    \"Instagram\": \"<string>\",\n    \"YouTube\": \"<string>\",\n    \"LinkedIn\": \"<string>\",\n    \"PhoneNumber\": \"<string>\",\n    \"Email\": \"<string>\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/rfollicenserequest",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfollicenserequest"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"RequestId\": \"<integer>\"\n}"
+                },
+                {
+                    "id": "719525a7-225d-4da0-b2eb-1dd918162d15",
+                    "name": "internal error in Appian System",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"RequestId\": \"<integer>\",\n    \"InvestorAccount\": \"<string>\",\n    \"BrandNameEnglish\": \"<string>\",\n    \"BrandNameArabic\": \"<string>\",\n    \"Category\": \"<string>\",\n    \"Subcategory\": \"<string>\",\n    \"DisplayLicenseOnUserManual\": \"<string>\",\n    \"Region\": \"<string>\",\n    \"City\": \"<string>\",\n    \"BuildingNumber\": \"<string>\",\n    \"StreetName\": \"<string>\",\n    \"District\": \"<string>\",\n    \"PostalCode\": \"<string>\",\n    \"Website\": \"<string>\",\n    \"Facebook\": \"<string>\",\n    \"Twitter\": \"<string>\",\n    \"Instagram\": \"<string>\",\n    \"YouTube\": \"<string>\",\n    \"LinkedIn\": \"<string>\",\n    \"PhoneNumber\": \"<string>\",\n    \"Email\": \"<string>\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/rfollicenserequest",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfollicenserequest"
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"Response\": \"<string>\"\n}"
+                }
+            ]
+        },
+        {
+            "name": "uplaod 4 documents related to the request submission or update(National Address Subscription Certificate, Logo ,Trademark registration certificate, other)",
+            "id": "ca69ad2c-c7bc-4d0a-9bae-2538fac94e5a",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "description": "(Required) ",
+                        "key": "Appian-API-Key",
+                        "value": "esse ullamco cillum"
+                    },
+                    {
+                        "description": "(Required) ",
+                        "key": "Appian-Document-Name",
+                        "value": "esse ullamco cillum"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "based on uploaded file type (application/pdf, image/png ....)"
+                    }
+                ],
+                "body": {
+                    "mode": "file",
+                    "file": {}
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/rfoluplaoddocuments?RequestId=75706578&DocumentType=OperationalPlan",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "rfoluplaoddocuments"
+                    ],
+                    "query": [
+                        {
+                            "key": "RequestId",
+                            "value": "75706578",
+                            "description": "(Required) "
+                        },
+                        {
+                            "key": "DocumentType",
+                            "value": "OperationalPlan",
+                            "description": "(Required) "
+                        }
+                    ]
+                },
+                "description": "uplaod 4 documents related to the request submission or update(National Address Subscription Certificate, Logo ,Trademark registration certificate, other)"
+            },
+            "response": [
+                {
+                    "id": "81157979-8ea8-43e3-b1b8-3f178d645613",
+                    "name": "document uploaded to Appian Successfully",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            },
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-Document-Name",
+                                "value": "<string>"
+                            }
+                        ],
+                        "body": {
+                            "mode": "file",
+                            "file": {}
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/rfoluplaoddocuments?RequestId=<integer>&DocumentType=<string>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfoluplaoddocuments"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "DocumentType",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"DocumentId\": \"<integer>\"\n}"
+                },
+                {
+                    "id": "9a233ba7-2b61-4263-9ff9-41710d821bf3",
+                    "name": "400 Bad Request",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            },
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-Document-Name",
+                                "value": "<string>"
+                            }
+                        ],
+                        "body": {
+                            "mode": "file",
+                            "file": {}
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/rfoluplaoddocuments?RequestId=<integer>&DocumentType=<string>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfoluplaoddocuments"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "DocumentType",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Bad Request",
+                    "code": 400,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"Response\": \"<string>\"\n}"
+                },
+                {
+                    "id": "46d431da-e5dc-427c-86fd-6a02665e3bce",
+                    "name": "internal error in Appian System",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            },
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-Document-Name",
+                                "value": "<string>"
+                            }
+                        ],
+                        "body": {
+                            "mode": "file",
+                            "file": {}
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/rfoluplaoddocuments?RequestId=<integer>&DocumentType=<string>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfoluplaoddocuments"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "DocumentType",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"Response\": \"<string>\"\n}"
+                }
+            ]
+        },
+        {
+            "name": "get all RFOL request details by id(including license id if uplaoded & request status)",
+            "id": "ac586473-b97c-4d7e-b34f-aa666ceb9b7e",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "description": "(Required) ",
+                        "key": "Appian-API-Key",
+                        "value": "esse ullamco cillum"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/rfolgetrequestbyid?RequestId=75706578",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "rfolgetrequestbyid"
+                    ],
+                    "query": [
+                        {
+                            "key": "RequestId",
+                            "value": "75706578",
+                            "description": "(Required) "
+                        }
+                    ]
+                },
+                "description": "get all RFOL request details by id(including license id if uplaoded & request status)"
+            },
+            "response": [
+                {
+                    "id": "36ac5af5-6279-4e1a-b5a8-1dbb1edd8f3a",
+                    "name": "request details returned successfully",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/rfolgetrequestbyid?RequestId=<integer>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfolgetrequestbyid"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"RequestId\": \"<integer>\",\n \"InvestorAccount\": \"<string>\",\n \"BrandNameEnglish\": \"<string>\",\n \"BrandNameArabic\": \"<string>\",\n \"Category\": \"<string>\",\n \"Subcategory\": \"<string>\",\n \"displayLicenseOnUserManual\": \"<string>\",\n \"Region\": \"<string>\",\n \"City\": \"<string>\",\n \"BuildingNumber\": \"<string>\",\n \"StreetName\": \"<string>\",\n \"District\": \"<string>\",\n \"PostalCode\": \"<string>\",\n \"Website\": \"<string>\",\n \"Facebook\": \"<string>\",\n \"Twitter\": \"<string>\",\n \"Instagram\": \"<string>\",\n \"YouTube\": \"<string>\",\n \"LinkedIn\": \"<string>\",\n \"PhoneNumber\": \"<string>\",\n \"Email\": \"<string>\",\n \"RequestStatus\": \"<string>\"\n}"
+                },
+                {
+                    "id": "31592747-b8e9-413b-b5d9-0c170b3ecc8b",
+                    "name": "400 Bad Request",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/rfolgetrequestbyid?RequestId=<integer>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfolgetrequestbyid"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Bad Request",
+                    "code": 400,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"Response\": \"<string>\"\n}"
+                },
+                {
+                    "id": "61f8ff9e-ebb7-49f8-9b42-a03603b7b707",
+                    "name": "404 Not Found",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/rfolgetrequestbyid?RequestId=<integer>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfolgetrequestbyid"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Not Found",
+                    "code": 404,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"Response\": \"<string>\"\n}"
+                },
+                {
+                    "id": "bfba2f85-c7c3-4151-9d5f-15ed66ebbb54",
+                    "name": "internal error in Appian System",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/rfolgetrequestbyid?RequestId=<integer>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfolgetrequestbyid"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"Response\": \"<string>\"\n}"
+                }
+            ]
+        },
+        {
+            "name": "get any uploaded document by it's Appian doc id",
+            "id": "4c8133c2-1895-4ede-9ec6-bdcb53710973",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "description": "(Required) ",
+                        "key": "Appian-API-Key",
+                        "value": "esse ullamco cillum"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/rfoldownloaddocumentbyrequestid?RequestId=75706578&DocumentType=TrademarkRegistrationCertificate",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "rfoldownloaddocumentbyrequestid"
+                    ],
+                    "query": [
+                        {
+                            "key": "RequestId",
+                            "value": "75706578",
+                            "description": "(Required) "
+                        },
+                        {
+                            "key": "DocumentType",
+                            "value": "TrademarkRegistrationCertificate",
+                            "description": "(Required) "
+                        }
+                    ]
+                },
+                "description": "get any uploaded document by it's Appian doc id"
+            },
+            "response": [
+                {
+                    "id": "7c257832-10dc-4d8d-8bc0-b237cca4bd68",
+                    "name": "return the document",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/rfoldownloaddocumentbyrequestid?RequestId=<integer>&DocumentType=<string>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfoldownloaddocumentbyrequestid"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "DocumentType",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "disabled": false,
+                            "description": "name.extension",
+                            "key": "File-Name",
+                            "value": "<string>"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "\"<binary>\""
+                },
+                {
+                    "id": "738b6ab4-d0a5-4a43-88b9-74028a8302d9",
+                    "name": "400 Bad Request",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/rfoldownloaddocumentbyrequestid?RequestId=<integer>&DocumentType=<string>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfoldownloaddocumentbyrequestid"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "DocumentType",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Bad Request",
+                    "code": 400,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"Response\": \"<string>\"\n}"
+                },
+                {
+                    "id": "02a95535-d354-4e38-9b53-89de56ac3e1d",
+                    "name": "404 Not Found",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/rfoldownloaddocumentbyrequestid?RequestId=<integer>&DocumentType=<string>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfoldownloaddocumentbyrequestid"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "DocumentType",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Not Found",
+                    "code": 404,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"Response\": \"<string>\"\n}"
+                },
+                {
+                    "id": "71937d49-2e89-47e5-a529-e9dffbe60dd3",
+                    "name": "internal error in Appian System",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "(Required) ",
+                                "key": "Appian-API-Key",
+                                "value": "<string>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/rfoldownloaddocumentbyrequestid?RequestId=<integer>&DocumentType=<string>",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "rfoldownloaddocumentbyrequestid"
+                            ],
+                            "query": [
+                                {
+                                    "key": "RequestId",
+                                    "value": "<integer>"
+                                },
+                                {
+                                    "key": "DocumentType",
+                                    "value": "<string>"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"Response\": \"<string>\"\n}"
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "apikey",
+        "apikey": [
+            {
+                "key": "value",
+                "value": "{{Appian-API-Key}}",
+                "type": "string"
+            },
+            {
+                "key": "key",
+                "value": "Appian-API-Key",
+                "type": "string"
+            }
+        ]
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "id": "74e2c41d-d6f2-4b72-978b-88e30141b10d",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "id": "28ce034e-4716-4bb3-83b6-12e304e95134",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "id": "39763144-0637-4c1e-b976-0f0ff9c6bc89",
+            "value": ""
+        }
+    ]
+}
